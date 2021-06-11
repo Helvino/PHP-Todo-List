@@ -21,7 +21,7 @@
 		$query = "INSERT INTO ToDo(projectTitle, projectDescription, date) VALUES ('$title', '$description', now())";
 		$addProj = mysqli_query($link, $query); //use local variable to check if communication with the server was successful.
 		if($addProj){
-			echo "New project has been Added.";
+			echo "A new project has been Added.";
 		}
 		else{
 			echo mysqli_error($link);
@@ -35,19 +35,26 @@
 	<title>Add Project</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 	<h1 id="title">Add Project:</h1>
 	<hr>
-	<!-- Get Project informatoin from user -->
+	<!-- Get Project information from user -->
 	<form method="post" action="addProject.php">
-		<p>Project Title: </p>
-		<input type="text" name="projectTitle">
-		<p>Project Description: </p>
-		<input type="text" name="projectDescription">
+		<p id="description">To Do Title: </p>
+		<input class="textarea" type="text" name="projectTitle">
+		<p id="description">To Do Description: </p>
+		<input class="textarea" type="text" name="projectDescription">
 		<br>
 		<input type="submit" name="submit" value="Add Project">
 	</form>
+
+	<?php if (isset($errors)) { ?>
+	<p><?php echo $errors; ?></p>
+	<?php } ?>
+
 	<br>
-	<button><a href="index.php">View To Do List</a></button>
+	<button class="button"><a href="index.php">View To Do List</a></button>
+
 </body>
 </html>

@@ -23,29 +23,41 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    max-width: 700px;
+    width: 80%;
+    margin: 20px auto;
 }
 
 a {
     display: block;
-    float: left;
+    float: center;
     color: #282828;
     font-family: Segoe UI;
     font-weight: 500;
     position: relative;
     margin: 0 auto 0 auto;
-    background-color: #ffffff;
     border-radius: 5px;
     text-decoration:none;
     text-align: center;
      -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.3);
            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     border: 1px solid;
-    /* padding-left: 20px; */
+    transition-duration: 0.4s;
+}
+
+a:hover{
+    background-color: #8156a9;
+    color: white;
+}
+
+h3{
+    margin-top: 40px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 ul {
     list-style-type: none;
-  }
+}
 
 hr {
     border: 0;
@@ -60,7 +72,36 @@ hr {
     margin-bottom: 40px;
 }
 
-.test {
-    background-color: red;
-    margin-top: 40px;
+.tasks {
+    background-color: inherit;
+}
+
+#description {
+    border-left: 3px solid;
+    padding-left: 5px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#date {
+    display: inline-block;
+}
+
+.button {
+    background-color: inherit;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: inherit;
+    color: white;
+}
+
+.textarea {
+    border: 2px solid;
+    padding: 15px; 
+    width: 300px;
+    resize: none;
 }

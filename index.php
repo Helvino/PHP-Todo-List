@@ -3,18 +3,22 @@
 require_once("db_connect.php"); ?>
 
 <html>
+
 <head>
 	<title>Project ToDo List</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+
 	<h1 id="title">List of my To-do's</h1>
 	<hr>
-	<button class="test"><a href="addProject.php">Add a task</a></button>
-	<button><a href="completedProjects.php">View Completed Tasks</a></button>
-	<h3>ToDo:</h3>
+	<button class="button"><a href="addProject.php">Add a task</a></button>
+	<button class="button"><a href="completedProjects.php">View Completed Todo's</a></button>
+	<h3>My To-do's:</h3>
 
-	<div class="test">
+	<div class="tasks">
+
 	<?php
 		db();
 		global $link;  //establish connection with db_connect.php $link
@@ -35,15 +39,19 @@ require_once("db_connect.php"); ?>
 	
 	<!-- List all Open ToDo Projects and the Date they were created -->
 	<ul>
-		<li><a href="projectDetails.php?id=<?php echo $id?>"><?php echo $title ?><?php echo " $description" ?></a></li>
-		<?php echo " $date"; ?>
+		<li>
+			<h2 id="date"><?php echo " $date" ?></h2>
+			<h1 id="test1"><a href="projectDetails.php?id=<?php echo $id?>"><?php echo $title ?></a></h1>
+			<p id="description"><?php echo " $description" ?></p>
+			<hr>
+		</li>
 	</ul>
 	
-
 	<?php
 		}
 	}
 	?> <!-- Close php if and while loops -->
+
 	</div>
 	
 </body>

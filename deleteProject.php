@@ -14,14 +14,21 @@ if(isset($_GET['id'])){
 	$deleteProj = mysqli_query($link, $query);
 	if($deleteProj)
 	{
-		echo "Project Deleted Successfully";
+		echo "Project Deleted Successfully!";
 	}
 	else{
 		echo mysqli_error($link);
 	}
 	}
 ?>
-
+<html>
+<head>
+	<title>Project ToDo List</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 <br>
 <br>
-<button><a href="index.php"> Return to ToDo List</a></button>
+<button class="button"><a href="index.php">Return to ToDo List</a></button>
+</body>
+</html>

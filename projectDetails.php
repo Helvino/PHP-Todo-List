@@ -29,25 +29,24 @@ if(isset($_GET['id'])){
 }
 ?>
 
-
 <html>
 <head>
 	<title>Project Details</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<h1 id="title">Project Details</h1>
+	<h1 id="title">To Do Details</h1>
 	<hr>
 	<!-- Display Data -->
 	<h2><?php echo $title ?></h2>
 	<p><b>Description: </b><?php echo $description ?></p>
-	<small><?php echo "<b>Start Date: </b> $date" ?></small>
+	<small><?php echo "<b>Start Time: </b> $date" ?></small>
 	<br>
 	<br>
 	<a href="editProject.php?id=<?php echo $id ?>">Edit</a>
-	<a href="completed.php?id=<?php echo $id ?>">Complete Project</a>
-	<a href="deleteProject.php?id=<?php echo $id ?>">Delete Project</a>
+	<a href="completed.php?id=<?php echo $id ?>">Complete ToDo</a>
+	<a href="deleteProject.php?id=<?php echo $id ?>">Delete ToDo</a>
 	<br>
-	<button><a href="index.php">View To Do List</a></button>
+	<button class="button"><a href="index.php">View To Do List</a></button>
 </body>
 </html>

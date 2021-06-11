@@ -4,14 +4,15 @@ require_once("db_connect.php"); ?>
 
 <html>
 <head>
-	<title>Completed Projects List</title>
+	<title>Completed ToDo's List</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<h1>Completed Projects</h1>
+	<h1>Completed ToDo's</h1>
 	<hr>	
 
-	<?php
+<?php
+
 	//Establish Connection to db
 	db();
 	global $link;
@@ -39,9 +40,10 @@ require_once("db_connect.php"); ?>
 	<?php
 		}
 	}
-	?>
+?>
 
 	<br>
-	<button><a href="index.php">View To Do List</a></button>
+	<button class="button"><a href="index.php">View To Do List</a></button>
+	
 </body>
 </html>

@@ -61,8 +61,6 @@ if(isset($_GET['id'])){
 } 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,6 +72,6 @@ if(isset($_GET['id'])){
     <a href="completed.php?id=<?php echo $id ?>">Complete Project</a>
     <a href="deleteProject.php?id=<?php echo $id ?>">Delete Project</a>
     <br>
-    <button><a href="index.php">View To Do List</a></button>
+    <button class="button"><a href="index.php">View To Do List</a></button>
 </body>
 </html>
